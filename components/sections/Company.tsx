@@ -28,11 +28,18 @@ export default function Company() {
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
               关于晖致
             </p>
-            <div className="space-y-3 text-sm text-slate-700">
-              <p>2020 年由辉瑞普强与迈蓝合并成立</p>
-              <p>总部美国，产品行销 165 个市场</p>
-              <p>中国 5000+ 员工，总部上海，覆盖 300+ 城市</p>
-            </div>
+            <ul className="space-y-3 text-sm text-slate-700">
+              {[
+                "2020 年由辉瑞普强与迈蓝合并成立",
+                "总部美国，产品行销 165 个市场",
+                "涵盖心脑血管、骨科疼痛及非处方药等领域的药品和健康服务",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#652D90] mt-1.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Core products */}
