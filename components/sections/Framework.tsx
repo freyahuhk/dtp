@@ -2,7 +2,7 @@ const FRAMEWORK_ROWS = [
   {
     dim: "可获得",
     icon: "📋",
-    meaning: "处方可获得（不是药的库存）",
+    meaning: "处方可获得",
     desc: "多方渠道来源处方，患者才能到 DTP 药房取药",
     metrics: ["多方渠道量", "来源结构", "院源多渠道比"],
     color: "purple" as const,
@@ -10,7 +10,7 @@ const FRAMEWORK_ROWS = [
   {
     dim: "可负担",
     icon: "💳",
-    meaning: "双通道可刷（不是简单医保）",
+    meaning: "双通道可刷",
     desc: "医保资质覆盖到位，患者的账单才真的付得起",
     metrics: ["双通道资质覆盖", "报销比", "自费/医保结构"],
     color: "gold" as const,
@@ -18,7 +18,7 @@ const FRAMEWORK_ROWS = [
   {
     dim: "可触达",
     icon: "🤝",
-    meaning: "服务可达（不只是买药方便）",
+    meaning: "服务可达",
     desc: "续方、随访、依从性管理全链路覆盖",
     metrics: ["复购率", "用药完成率", "随访触达率", "依从性"],
     color: "emerald" as const,
@@ -111,16 +111,16 @@ export default function Framework() {
         </div>
 
         {/* Key insight */}
-        <div className="bg-[#2D1255] rounded-xl p-6">
-          <p className="text-xs font-semibold text-purple-300/50 mb-3 tracking-wider uppercase">
+        <div className="bg-[#F5EDF9] border border-purple-200 rounded-xl p-6">
+          <p className="text-xs font-semibold text-[#652D90] mb-3 tracking-wider uppercase">
             关键洞察
           </p>
-          <p className="text-purple-100 leading-relaxed">
+          <p className="text-slate-700 leading-relaxed">
             普通零售的可及性是"
-            <strong className="text-white">药—钱—店</strong>
+            <strong className="text-slate-900">药—钱—店</strong>
             "的问题；DTP 的可及性是"
-            <strong className="text-[#E8A020]">处方—医保资质—患者管理</strong>
-            "的问题。框架相同，但每个维度的核心指标完全不同。
+            <strong className="text-[#652D90]">处方—医保资质—患者管理</strong>
+            "的问题。
           </p>
         </div>
       </div>

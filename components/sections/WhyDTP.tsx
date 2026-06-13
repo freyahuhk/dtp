@@ -81,9 +81,6 @@ export default function WhyDTP() {
 
         {/* Q&A */}
         <div>
-          <p className="text-xs text-slate-400 mb-3 font-medium tracking-wider uppercase">
-            追问答复
-          </p>
           <QAAccordion items={QA_ITEMS} />
         </div>
       </div>
