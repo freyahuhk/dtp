@@ -29,9 +29,9 @@ export default function Company() {
               关于晖致
             </p>
             <div className="space-y-3 text-sm text-slate-700">
-              <p>正大集团旗下，强强并购整合</p>
-              <p>精品仿制药为主</p>
-              <p>上市产品超 20 年积淀</p>
+              <p>2020 年由辉瑞普强与迈蓝合并成立</p>
+              <p>总部美国，产品行销 165 个市场</p>
+              <p>中国 5000+ 员工，总部上海，覆盖 300+ 城市</p>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ export default function Company() {
               <div className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#652D90] mt-1.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-slate-800 text-sm">心血管</p>
+                  <p className="font-semibold text-slate-800 text-sm">心脑血管</p>
                   <p className="text-slate-500 text-xs mt-0.5">
                     立普妥 · 络活喜
                   </p>
@@ -53,8 +53,8 @@ export default function Company() {
               <div className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#E8A020] mt-1.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-slate-800 text-sm">神经类</p>
-                  <p className="text-slate-500 text-xs mt-0.5">乐瑞卡</p>
+                  <p className="font-semibold text-slate-800 text-sm">中枢神经</p>
+                  <p className="text-slate-500 text-xs mt-0.5">左洛复 · 怡诺思</p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100">
@@ -88,7 +88,7 @@ export default function Company() {
             <span className="text-xl mt-0.5 shrink-0">🔍</span>
             <div>
               <p className="text-sm font-semibold text-amber-800 mb-2">
-                基于公开资料的推测（期待验证）
+                基于公开资料的推测
               </p>
               <p className="text-sm text-amber-700 leading-relaxed">
                 晖致产品以仿制的长期慢病用药为主，所以推测晖致 DTP
