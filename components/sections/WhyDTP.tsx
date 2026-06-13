@@ -19,16 +19,17 @@ export default function WhyDTP() {
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full tracking-wider">
+          <span className="text-xs font-semibold text-[#652D90] bg-[#F5EDF9] px-3 py-1.5 rounded-full tracking-wider">
             01 · 宏观背景
           </span>
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-5">
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
           为什么会有 DTP？
         </h2>
+        <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-blue-500 pl-5 mb-12 leading-relaxed">
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
           DTP 是医药行业在"医药分开 + 多方付款"大趋势下，
           <strong className="text-slate-800">绕开医院、直达患者</strong>
           的院外渠道。
@@ -36,20 +37,16 @@ export default function WhyDTP() {
 
         {/* 3 key points */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12">
-          <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
-            <div className="text-blue-500 font-bold text-sm mb-3 font-mono">
-              01
-            </div>
+          <div className="bg-[#F5EDF9] rounded-xl p-6 border border-purple-100">
+            <div className="text-[#652D90] font-bold text-sm mb-3 font-mono">01</div>
             <h3 className="font-semibold text-slate-900 mb-3">政策推力</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
               医保控费 + 医疗改革 + 药品比价制度，层层约束让医院对高值药品的院内分销受限，渠道自然向院外迁移。
             </p>
           </div>
 
-          <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
-            <div className="text-blue-500 font-bold text-sm mb-3 font-mono">
-              02
-            </div>
+          <div className="bg-[#F5EDF9] rounded-xl p-6 border border-purple-100">
+            <div className="text-[#652D90] font-bold text-sm mb-3 font-mono">02</div>
             <h3 className="font-semibold text-slate-900 mb-3">双通道政策</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
               让新药/特药这些医保乙类也能在院外定点药店报销，是 DTP
@@ -57,10 +54,8 @@ export default function WhyDTP() {
             </p>
           </div>
 
-          <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
-            <div className="text-blue-500 font-bold text-sm mb-3 font-mono">
-              03
-            </div>
+          <div className="bg-[#F5EDF9] rounded-xl p-6 border border-purple-100">
+            <div className="text-[#652D90] font-bold text-sm mb-3 font-mono">03</div>
             <h3 className="font-semibold text-slate-900 mb-3">市场规模</h3>
             <div className="flex items-end gap-3 my-4">
               <div>
@@ -70,12 +65,12 @@ export default function WhyDTP() {
                 </div>
               </div>
               <div className="flex-1 flex items-center pb-2">
-                <div className="flex-1 h-px bg-gradient-to-r from-slate-300 to-blue-500" />
-                <span className="text-blue-500 text-xs px-1">→</span>
+                <div className="flex-1 h-px bg-gradient-to-r from-slate-300 to-[#652D90]" />
+                <span className="text-[#652D90] text-xs px-1">→</span>
               </div>
               <div>
                 <div className="text-xs text-slate-400 mb-1">2024</div>
-                <div className="text-2xl font-bold text-blue-600">
+                <div className="text-2xl font-bold text-[#652D90]">
                   872<span className="text-sm">亿</span>
                 </div>
               </div>

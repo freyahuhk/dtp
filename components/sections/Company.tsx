@@ -6,17 +6,18 @@ export default function Company() {
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1.5 rounded-full tracking-wider">
+          <span className="text-xs font-semibold text-[#652D90] bg-[#F5EDF9] px-3 py-1.5 rounded-full tracking-wider">
             04 · 公司视角
           </span>
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-5">
-          任为的角色
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
+          晖致的角色
         </h2>
+        <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-blue-500 pl-5 mb-12 leading-relaxed">
-          任为以精品仿制药为主，DTP 是其院外直达患者、
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
+          晖致以精品仿制药为主，DTP 是其院外直达患者、
           <strong className="text-slate-800">沉淀慢病患者资产</strong>
           的第二增长曲线。
         </p>
@@ -56,23 +57,19 @@ export default function Company() {
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-red-400 mt-1.5 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#652D90] mt-1.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-slate-800 text-sm">
-                    心血管
-                  </p>
+                  <p className="font-semibold text-slate-800 text-sm">心血管</p>
                   <p className="text-slate-500 text-xs mt-0.5">
-                    竹墨妥 · 结括达
+                    立普妥 · 络活喜
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-purple-400 mt-1.5 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#E8A020] mt-1.5 shrink-0" />
                 <div>
-                  <p className="font-semibold text-slate-800 text-sm">
-                    神经类
-                  </p>
-                  <p className="text-slate-500 text-xs mt-0.5">亿奇亚</p>
+                  <p className="font-semibold text-slate-800 text-sm">神经类</p>
+                  <p className="text-slate-500 text-xs mt-0.5">乐瑞卡</p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100">
@@ -89,7 +86,7 @@ export default function Company() {
               近期表现
             </p>
             <div className="text-center py-4">
-              <div className="text-5xl font-bold text-blue-600 mb-1">+22%</div>
+              <div className="text-5xl font-bold text-[#652D90] mb-1">+22%</div>
               <div className="text-xs text-slate-500 mb-4">
                 2026 Q1 大中华区特药增长
               </div>
@@ -109,7 +106,7 @@ export default function Company() {
                 基于公开资料的推测（期待验证）
               </p>
               <p className="text-sm text-amber-700 leading-relaxed">
-                任为产品以仿制的长期慢病用药为主，所以推测 DTP
+                晖致产品以仿制的长期慢病用药为主，所以推测 DTP
                 这条线的核心挑战，可能不是高值特药的<em>可负担</em>
                 问题，而是
                 <strong>慢病患者的院外长期续方和依从性管理</strong>

@@ -19,16 +19,17 @@ export default function WhatDTP() {
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1.5 rounded-full tracking-wider">
+          <span className="text-xs font-semibold text-[#652D90] bg-[#F5EDF9] px-3 py-1.5 rounded-full tracking-wider">
             02 · 商业模式
           </span>
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-5">
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
           DTP 是部什么链条？
         </h2>
+        <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-blue-500 pl-5 mb-12 leading-relaxed">
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
           DTP 本质不是"卖药"，是
           <strong className="text-slate-800">承接多方 + 管理患者长期用药</strong>
           。
@@ -37,7 +38,7 @@ export default function WhatDTP() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12">
           {/* What */}
           <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-xl">
+            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
               💊
             </div>
             <h3 className="font-semibold text-slate-900 mb-2">卖什么</h3>
@@ -51,25 +52,25 @@ export default function WhatDTP() {
 
           {/* Who */}
           <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center mb-4 text-xl">
+            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
               🔗
             </div>
             <h3 className="font-semibold text-slate-900 mb-3">谁在其中</h3>
             <div className="space-y-2.5">
               <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#652D90] shrink-0" />
                 <span className="text-slate-600">
                   <strong>开方的</strong>：医生
                 </span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E8A020] shrink-0" />
                 <span className="text-slate-600">
                   <strong>用药的</strong>：患者
                 </span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
                 <span className="text-slate-600">
                   <strong>付费的</strong>：医保 / 自费
                 </span>
@@ -82,7 +83,7 @@ export default function WhatDTP() {
 
           {/* Moat */}
           <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4 text-xl">
+            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
               🏗️
             </div>
             <h3 className="font-semibold text-slate-900 mb-2">壁垒在哪</h3>

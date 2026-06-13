@@ -5,7 +5,7 @@ const FRAMEWORK_ROWS = [
     meaning: "处方可获得（不是药的库存）",
     desc: "多方渠道来源处方，患者才能到 DTP 药房取药",
     metrics: ["多方渠道量", "来源结构", "院源多渠道比"],
-    color: "blue" as const,
+    color: "purple" as const,
   },
   {
     dim: "可负担",
@@ -13,7 +13,7 @@ const FRAMEWORK_ROWS = [
     meaning: "双通道可刷（不是简单医保）",
     desc: "医保资质覆盖到位，患者的账单才真的付得起",
     metrics: ["双通道资质覆盖", "报销比", "自费/医保结构"],
-    color: "purple" as const,
+    color: "gold" as const,
   },
   {
     dim: "可触达",
@@ -26,22 +26,22 @@ const FRAMEWORK_ROWS = [
 ];
 
 const COLOR_MAP = {
-  blue: {
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    badge: "bg-blue-100 text-blue-700",
-    tag: "bg-white border border-blue-200 text-blue-600",
-  },
   purple: {
-    bg: "bg-purple-50",
+    bg: "bg-[#F5EDF9]",
     border: "border-purple-100",
-    badge: "bg-purple-100 text-purple-700",
-    tag: "bg-white border border-purple-200 text-purple-600",
+    badge: "bg-[#652D90] text-white",
+    tag: "bg-white border border-purple-200 text-[#652D90]",
+  },
+  gold: {
+    bg: "bg-amber-50",
+    border: "border-amber-100",
+    badge: "bg-[#E8A020] text-white",
+    tag: "bg-white border border-amber-200 text-amber-700",
   },
   emerald: {
     bg: "bg-emerald-50",
     border: "border-emerald-100",
-    badge: "bg-emerald-100 text-emerald-700",
+    badge: "bg-emerald-600 text-white",
     tag: "bg-white border border-emerald-200 text-emerald-600",
   },
 };
@@ -54,16 +54,17 @@ export default function Framework() {
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full tracking-wider">
+          <span className="text-xs font-semibold text-[#652D90] bg-[#F5EDF9] px-3 py-1.5 rounded-full tracking-wider">
             03 · 分析框架
           </span>
         </div>
 
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-5">
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
           DTP "患者可及性"框架
         </h2>
+        <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-blue-500 pl-5 mb-12 leading-relaxed">
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
           GMV 只是结果，底层驱动是
           <strong className="text-slate-800">"患者可及性"</strong>
           ——可拆成三条可量化的线，分别找对应的核心指标。
@@ -110,15 +111,15 @@ export default function Framework() {
         </div>
 
         {/* Key insight */}
-        <div className="bg-slate-900 rounded-xl p-6">
-          <p className="text-xs font-semibold text-slate-500 mb-3 tracking-wider uppercase">
+        <div className="bg-[#2D1255] rounded-xl p-6">
+          <p className="text-xs font-semibold text-purple-300/50 mb-3 tracking-wider uppercase">
             关键洞察
           </p>
-          <p className="text-slate-300 leading-relaxed">
+          <p className="text-purple-100 leading-relaxed">
             普通零售的可及性是"
             <strong className="text-white">药—钱—店</strong>
             "的问题；DTP 的可及性是"
-            <strong className="text-blue-400">处方—医保资质—患者管理</strong>
+            <strong className="text-[#E8A020]">处方—医保资质—患者管理</strong>
             "的问题。框架相同，但每个维度的核心指标完全不同。
           </p>
         </div>

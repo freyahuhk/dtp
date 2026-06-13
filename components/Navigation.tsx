@@ -47,7 +47,7 @@ export default function Navigation() {
           <span
             className={`text-xs font-medium transition-all duration-200 whitespace-nowrap ${
               active === id
-                ? "text-blue-400 opacity-100"
+                ? "text-[#652D90] opacity-100"
                 : "text-slate-400 opacity-0 group-hover:opacity-100"
             }`}
           >
@@ -56,7 +56,7 @@ export default function Navigation() {
           <div
             className={`rounded-full border-2 transition-all duration-200 ${
               active === id
-                ? "w-3 h-3 bg-blue-500 border-blue-500"
+                ? "w-3 h-3 bg-[#652D90] border-[#652D90]"
                 : "w-2.5 h-2.5 bg-transparent border-slate-400 group-hover:border-slate-200"
             }`}
           />
