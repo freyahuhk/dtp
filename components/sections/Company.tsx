@@ -7,18 +7,18 @@ export default function Company() {
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-semibold text-[#652D90] bg-[#F5EDF9] px-3 py-1.5 rounded-full tracking-wider">
-            04 · 公司视角
+            04 · 晖致 DTP
           </span>
         </div>
 
         <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-          晖致的角色
+          晖致的 DTP 布局
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
         <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
-          晖致以精品仿制药为主，DTP 是其院外直达患者、
-          <strong className="text-slate-800">沉淀慢病患者资产</strong>
+          晖致以精品仿制药为主，DTP 是其院外直达慢病患者、
+          <strong className="text-slate-800">沉淀长期用药资产</strong>
           的第二增长曲线。
         </p>
 
@@ -26,34 +26,19 @@ export default function Company() {
           {/* Company profile */}
           <div className="bg-white rounded-xl p-6 border border-slate-200">
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
-              公司背景
+              关于晖致
             </p>
-            <div className="space-y-4 text-sm">
-              <div>
-                <span className="text-slate-400 text-xs">集团背景</span>
-                <p className="font-medium text-slate-800 mt-0.5">
-                  正大集团旗下
-                </p>
-              </div>
-              <div>
-                <span className="text-slate-400 text-xs">整合路径</span>
-                <p className="font-medium text-slate-800 mt-0.5">
-                  强强并购整合，多品牌协同
-                </p>
-              </div>
-              <div>
-                <span className="text-slate-400 text-xs">核心定位</span>
-                <p className="font-medium text-slate-800 mt-0.5">
-                  精品仿制药为主，上市产品超 20 年积淀
-                </p>
-              </div>
+            <div className="space-y-3 text-sm text-slate-700">
+              <p>正大集团旗下，强强并购整合</p>
+              <p>精品仿制药为主</p>
+              <p>上市产品超 20 年积淀</p>
             </div>
           </div>
 
           {/* Core products */}
           <div className="bg-white rounded-xl p-6 border border-slate-200">
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
-              核心产品
+              DTP 核心产品
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -74,7 +59,7 @@ export default function Company() {
               </div>
               <div className="pt-3 border-t border-slate-100">
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  多为长期慢病用药，患者续方管理需求天然强烈
+                  多为长期慢病用药，续方管理需求天然强烈
                 </p>
               </div>
             </div>
@@ -106,11 +91,10 @@ export default function Company() {
                 基于公开资料的推测（期待验证）
               </p>
               <p className="text-sm text-amber-700 leading-relaxed">
-                晖致产品以仿制的长期慢病用药为主，所以推测 DTP
+                晖致产品以仿制的长期慢病用药为主，所以推测晖致 DTP
                 这条线的核心挑战，可能不是高值特药的<em>可负担</em>
                 问题，而是
-                <strong>慢病患者的院外长期续方和依从性管理</strong>
-                ——不知道这个判断是否准确？贵司 DTP 实际主推哪些品类？
+                <strong>慢病患者的院外长期续方和依从性管理</strong>。
               </p>
             </div>
           </div>
