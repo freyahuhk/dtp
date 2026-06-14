@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { id: "hero", label: "定位" },
   { id: "why-dtp", label: "政策驱动" },
   { id: "what-dtp", label: "商业模式" },
-  { id: "framework", label: "可及框架" },
+  { id: "adv-challenge", label: "优势&挑战" },
   { id: "company", label: "晖致 DTP" },
   { id: "bi-value", label: "BI 价值" },
 ];

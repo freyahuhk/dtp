@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
 import WhyDTP from "@/components/sections/WhyDTP";
 import WhatDTP from "@/components/sections/WhatDTP";
-import Framework from "@/components/sections/Framework";
+import AdvSection from "@/components/sections/AdvSection";
 import Company from "@/components/sections/Company";
 import BIValue from "@/components/sections/BIValue";
 
@@ -14,7 +14,7 @@ export default function Home() {
         <Hero />
         <WhyDTP />
         <WhatDTP />
-        <Framework />
+        <AdvSection />
         <Company />
         <BIValue />
       </main>
