@@ -14,6 +14,14 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-3xl">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-lg lg:text-xl font-semibold text-white">
+            胡必青 <span className="text-[#E8A020]">Freya Hu</span>
+          </span>
+          <span className="text-purple-300/40">·</span>
+          <span className="text-sm text-purple-200/60">数据分析师</span>
+        </div>
+
         <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
           DTP 行业认知
           <br />
