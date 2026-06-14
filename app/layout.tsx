@@ -19,7 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh" className={`${geist.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        {children}
+        <div className="fixed bottom-6 right-6 z-40 pointer-events-none select-none">
+          <span className="text-xs font-medium tracking-widest text-black/10">
+            Freya Hu
+          </span>
+        </div>
+      </body>
     </html>
   );
 }
