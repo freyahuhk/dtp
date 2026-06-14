@@ -59,7 +59,7 @@ export default function WhatDTP() {
         </div>
 
         <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-          DTP 是部什么链条？
+          DTP 的链条是什么？
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
