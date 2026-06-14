@@ -1,4 +1,30 @@
 export default function Company() {
+  const steps = [
+    {
+      text: <>晖致的产品大部分是<strong className="text-slate-900">「过专利期原研药」</strong></>,
+      variant: "default" as const,
+    },
+    {
+      text: <>集采中，面对国产仿制药的低价竞争</>,
+      variant: "default" as const,
+    },
+    {
+      text: <>部分品种集采落标 <span className="text-[#652D90] mx-1 font-medium">→</span> 院内份额缩水</>,
+      variant: "default" as const,
+    },
+    {
+      text: (
+        <>
+          必须发展院外渠道{" "}
+          <span className="text-[#652D90] mx-1 font-medium">→</span>
+          DTP 药房 + 电商
+          <span className="text-slate-400 text-xs ml-2">（京东健康 / 阿里健康 / 美团买药）</span>
+        </>
+      ),
+      variant: "highlight" as const,
+    },
+  ];
+
   return (
     <section
       id="company"
@@ -16,77 +42,32 @@ export default function Company() {
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
-          晖致以精品仿制药为主，DTP 是其院外直达慢病患者、
-          <strong className="text-slate-800">沉淀长期用药资产</strong>
-          的第二增长曲线。
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-10 leading-relaxed">
+          在集采压力下，DTP 成为晖致维系院外份额、
+          <strong className="text-slate-800">直达慢病患者</strong>
+          的关键渠道。
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
-          {/* Company profile */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
-              关于晖致
-            </p>
-            <ul className="space-y-3 text-sm text-slate-700">
-              {[
-                "2020 年由辉瑞普强与迈蓝合并成立",
-                "总部美国，产品行销 165 个市场",
-                "涵盖心脑血管、骨科疼痛及非处方药等领域的药品和健康服务",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#652D90] mt-1.5 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Core products */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
-              DTP 核心产品
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#652D90] mt-1.5 shrink-0" />
-                <div>
-                  <p className="font-semibold text-slate-800 text-sm">心脑血管</p>
-                  <p className="text-slate-500 text-xs mt-0.5">
-                    立普妥 · 络活喜
-                  </p>
+        {/* Causal chain */}
+        <div className="max-w-xl mb-10">
+          {steps.map((step, i) => (
+            <div key={i}>
+              <div
+                className={`rounded-xl px-5 py-4 text-sm text-slate-700 leading-relaxed ${
+                  step.variant === "highlight"
+                    ? "bg-[#F5EDF9] border border-[#652D90]/25 font-medium text-[#652D90]"
+                    : "bg-white border border-slate-200"
+                }`}
+              >
+                {step.text}
+              </div>
+              {i < steps.length - 1 && (
+                <div className="flex justify-center py-1.5">
+                  <div className="w-px h-5 bg-[#652D90]/30" />
                 </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#E8A020] mt-1.5 shrink-0" />
-                <div>
-                  <p className="font-semibold text-slate-800 text-sm">中枢神经</p>
-                  <p className="text-slate-500 text-xs mt-0.5">左洛复 · 怡诺思</p>
-                </div>
-              </div>
-              <div className="pt-3 border-t border-slate-100">
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  多为长期慢病用药，续方管理需求天然强烈
-                </p>
-              </div>
+              )}
             </div>
-          </div>
-
-          {/* Performance */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-4">
-              近期表现
-            </p>
-            <div className="text-center py-4">
-              <div className="text-5xl font-bold text-[#652D90] mb-1">+22%</div>
-              <div className="text-xs text-slate-500 mb-4">
-                2026 Q1 大中华区特药增长
-              </div>
-              <div className="text-xs text-slate-400 bg-slate-50 rounded-lg p-2.5 leading-relaxed text-left">
-                注：此为大中华区特药整体表现，为 DTP 新业务的启动提供了有利的增长背景。
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Hypothesis callout */}
