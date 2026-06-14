@@ -53,7 +53,7 @@ export default function BIValue() {
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
         <p className="text-lg text-purple-200/70 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
-          DTP 作为新业务，数据分析的价值是驱动它
+          DTP 作为晖致的新业务，数据分析的价值是驱动它
           <strong className="text-white">从 0 到 1 跑通</strong>
           ——不只是出报表，而是建体系、跑逻辑、定方向。
         </p>
