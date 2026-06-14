@@ -1,15 +1,3 @@
-import QAAccordion from "@/components/QAAccordion";
-
-const QA_ITEMS = [
-  {
-    q: "DTP 和普通药店本质区别是什么？",
-    a: "普通药店卖 OTC，患者自己会买会用；DTP 专注专方药/高值药，需要医生开处方、有专业药事服务，还要管理患者长期续方和用药依从性。缺了任何一环，这个商业模式就跑不通。",
-  },
-  {
-    q: "为什么说三方分离是 DTP 的核心壁垒？",
-    a: "关键在收费链路的分离：用药的（患者）、开方的（医生）、付费的（医保/商保）三方分开。这意味着 DTP 必须对三方各自建立服务触点和信任——这是纯电商平台无法复制的核心壁垒。",
-  },
-];
 
 const TABLE_ROWS = [
   {
@@ -111,16 +99,6 @@ export default function WhatDTP() {
           </table>
         </div>
 
-        {/* DTP callout */}
-        <div className="bg-[#F5EDF9] border border-purple-100 rounded-xl p-5 mb-10 flex items-start gap-3">
-          <span className="text-[#652D90] text-lg shrink-0 mt-0.5">💡</span>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            <strong className="text-[#652D90]">DTP 的壁垒不在药本身</strong>，而在于同时打通三方——
-            开方的（医生）、用药的（患者）、付费的（医保）——三方分离，才能形成普通零售无法复制的服务闭环。
-          </p>
-        </div>
-
-        <QAAccordion items={QA_ITEMS} />
       </div>
     </section>
   );
