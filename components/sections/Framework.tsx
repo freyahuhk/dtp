@@ -1,3 +1,5 @@
+import AdvChallenge from "@/components/AdvChallenge";
+
 const FRAMEWORK_ROWS = [
   {
     dim: "可获得",
@@ -110,6 +112,7 @@ export default function Framework() {
           })}
         </div>
 
+        <AdvChallenge />
       </div>
     </section>
   );
