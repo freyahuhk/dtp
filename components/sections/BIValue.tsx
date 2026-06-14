@@ -75,7 +75,7 @@ export default function BIValue() {
         </div>
 
         {/* Methodology */}
-        <div className="bg-[#3D1A6A] rounded-xl p-6 border border-purple-800/50">
+        <div className="bg-white/8 rounded-xl p-6 border border-white/10">
           <p className="text-xs font-semibold text-purple-400/50 mb-5 tracking-wider uppercase">
             面对"数据缺失"怎么办
           </p>
