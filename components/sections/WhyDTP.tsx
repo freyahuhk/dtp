@@ -145,26 +145,6 @@ export default function WhyDTP() {
           </svg>
         </div>
 
-        {/* Market size */}
-        <div className="bg-[#F5EDF9] border border-purple-100 rounded-xl px-6 py-4 flex items-center gap-6 mb-10">
-          <div className="flex items-end gap-3">
-            <div>
-              <div className="text-xs text-slate-400 mb-1">2019</div>
-              <div className="text-2xl font-bold text-slate-500">345<span className="text-sm">亿</span></div>
-            </div>
-            <div className="flex items-center pb-2">
-              <div className="w-16 h-px bg-gradient-to-r from-slate-300 to-[#652D90]" />
-              <span className="text-[#652D90] text-xs px-1">→</span>
-            </div>
-            <div>
-              <div className="text-xs text-slate-400 mb-1">2024</div>
-              <div className="text-2xl font-bold text-[#652D90]">872<span className="text-sm">亿</span></div>
-            </div>
-          </div>
-          <div className="h-10 w-px bg-purple-200" />
-          <p className="text-slate-500 text-sm">结构性增长，非周期性</p>
-        </div>
-
         <QAAccordion items={QA_ITEMS} />
       </div>
     </section>
