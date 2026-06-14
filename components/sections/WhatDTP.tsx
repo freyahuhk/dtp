@@ -112,15 +112,6 @@ export default function WhatDTP() {
           </table>
         </div>
 
-        {/* 处方外流 note */}
-        <div className="flex items-start gap-2.5 px-1 mb-4 text-sm text-slate-500 leading-relaxed">
-          <span className="text-[#652D90] mt-0.5 shrink-0">▸</span>
-          <p>
-            DTP 的特殊性：处方在医院产生，但药品在院外（DTP 药房 / 电商）交付——承接的是
-            <strong className="text-slate-700">「处方外流」</strong>。
-          </p>
-        </div>
-
         {/* DTP vs 普通药店 accordion */}
         <div className="mt-4 border border-slate-200 rounded-lg overflow-hidden">
           <button
