@@ -1,3 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
+const COMPARISON_ROWS = [
+  { label: "卖什么",     normal: "OTC + 常见慢病药",    dtp: "高值专科药（肿瘤、罕见病、自免等）" },
+  { label: "需要处方吗", normal: "OTC 不需要",           dtp: "必须凭处方" },
+  { label: "能报医保吗", normal: "部分可刷个人账户",     dtp: "双通道品种可走统筹报销" },
+  { label: "服务",       normal: "基础售药",             dtp: "冷链存储、用药指导、患者管理" },
+  { label: "客单价",     normal: "几十 ~ 几百元",        dtp: "几千 ~ 几万元" },
+];
 
 const TABLE_ROWS = [
   {
@@ -34,6 +45,8 @@ const TABLE_ROWS = [
 ];
 
 export default function WhatDTP() {
+  const [compOpen, setCompOpen] = useState(false);
+
   return (
     <section
       id="what-dtp"
@@ -97,6 +110,60 @@ export default function WhatDTP() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* DTP vs 普通药店 accordion */}
+        <div className="mt-4 border border-slate-200 rounded-lg overflow-hidden">
+          <button
+            onClick={() => setCompOpen(!compOpen)}
+            className="w-full text-left px-4 py-3 flex items-center justify-between hover:bg-slate-50 transition-colors cursor-pointer"
+          >
+            <span className="text-sm text-slate-600 font-medium">
+              DTP 药房和普通药店的区别
+            </span>
+            <span
+              className={`text-slate-400 text-xl leading-none transition-transform duration-200 ${
+                compOpen ? "rotate-45" : ""
+              }`}
+            >
+              +
+            </span>
+          </button>
+          {compOpen && (
+            <div className="border-t border-slate-100 overflow-hidden">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-slate-50">
+                    <th className="text-left px-4 py-3 text-slate-400 font-medium w-28 border-b border-slate-100" />
+                    <th className="px-4 py-3 text-center text-slate-400 font-medium border-b border-slate-100">
+                      普通零售药店
+                    </th>
+                    <th className="px-4 py-3 text-center text-[#652D90] font-bold border-b border-[#652D90]/20 bg-[#F5EDF9]">
+                      DTP 专业药房
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISON_ROWS.map((row, i) => (
+                    <tr
+                      key={row.label}
+                      className={i < COMPARISON_ROWS.length - 1 ? "border-b border-slate-100" : ""}
+                    >
+                      <td className="px-4 py-3 text-slate-400 text-xs font-medium whitespace-nowrap">
+                        {row.label}
+                      </td>
+                      <td className="px-4 py-3 text-center text-slate-500 text-xs">
+                        {row.normal}
+                      </td>
+                      <td className="px-4 py-3 text-center text-slate-700 text-xs bg-[#faf8fd]">
+                        {row.dtp}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
       </div>
