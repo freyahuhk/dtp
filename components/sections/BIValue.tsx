@@ -1,18 +1,44 @@
-const DIRECTIONS = [
+const GOALS = ["患者可及性", "依从性", "渠道效率"];
+
+const RESULT_METRICS = ["GMV", "收入", "利润率"];
+const RESULT_DIMS = ["自费 / 医保", "处方来源（医院 / 科室）"];
+
+const PROCESS_ITEMS = [
   {
-    num: "01",
-    title: "建设数据标准",
-    desc: "通过数据治理提升数据质量，整合院内、院外、DTP、线上处方等各渠道数据，建立统一的数据底座。",
+    dim: "人",
+    label: "患者",
+    metrics: ["规模", "转化", "客单价", "疗程完成率", "按时复购率", "断药召回率"],
+    dims: ["新 / 老 / 断药", "年龄层"],
   },
   {
-    num: "02",
-    title: "搭建指标体系",
-    desc: "搭建 DTP 渠道和患者全生命周期的数据指标体系，从进方、取药、续方到依从性，覆盖患者完整路径。",
+    dim: "人",
+    label: "医生 / 医院",
+    metrics: ["规模", "覆盖率", "订单数"],
+    dims: [],
   },
   {
-    num: "03",
-    title: "支持品牌策略决策",
-    desc: "监控各品牌在各渠道的生意表现，用数据分析回答：该在哪个渠道加投入？哪些药房需要重点运营？",
+    dim: "货",
+    label: "特药",
+    metrics: ["规模", "转化", "价值"],
+    dims: ["功效", "具体品类", "疗程长短", "价格带", "原研 vs 仿制"],
+  },
+  {
+    dim: "场",
+    label: "渠道",
+    metrics: ["贡献占比", "转化差异"],
+    dims: ["线下药房", "线上平台（电商 / O2O）"],
+  },
+  {
+    dim: "供",
+    label: "供应链",
+    metrics: ["库存规模", "平均库存天数", "缺货率 / 断货天数", "规模", "动销", "单均价"],
+    dims: ["线上", "线下"],
+  },
+  {
+    dim: "维",
+    label: "其他维度",
+    metrics: ["城市分级", "区域"],
+    dims: [],
   },
 ];
 
@@ -52,26 +78,95 @@ export default function BIValue() {
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-purple-200/70 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
+        <p className="text-lg text-purple-200/70 border-l-4 border-[#E8A020] pl-5 mb-10 leading-relaxed">
           DTP 作为晖致的新业务，数据分析的价值是驱动它
           <strong className="text-white">从 0 到 1 跑通</strong>
-          ——不只是出报表，而是建体系、跑逻辑、定方向。
+          ——核心是建立完整的指标体系，让每一层业务都有数可依。
         </p>
 
-        {/* 3 directions */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
-          {DIRECTIONS.map((d) => (
-            <div
-              key={d.num}
-              className="bg-[#3D1A6A] rounded-xl p-6 border border-purple-800/50"
-            >
-              <div className="text-[#E8A020] font-bold text-sm mb-4 font-mono">
-                方向 {d.num}
-              </div>
-              <h3 className="font-semibold text-white mb-3">{d.title}</h3>
-              <p className="text-purple-200/60 text-sm leading-relaxed">{d.desc}</p>
+        {/* Analysis goals */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-purple-300/40 text-xs shrink-0">分析目标</span>
+          <div className="flex gap-2 flex-wrap">
+            {GOALS.map((g) => (
+              <span
+                key={g}
+                className="text-xs font-medium text-[#E8A020] bg-[#E8A020]/15 px-3 py-1 rounded-full border border-[#E8A020]/30"
+              >
+                {g}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Result metrics */}
+        <div className="bg-[#3D1A6A] rounded-xl p-5 border border-purple-800/50 mb-4">
+          <div className="flex items-center gap-4 mb-3">
+            <span className="text-[#E8A020] text-xs font-mono font-semibold shrink-0">
+              结果指标
+            </span>
+            <div className="flex gap-2 flex-wrap">
+              {RESULT_METRICS.map((m) => (
+                <span
+                  key={m}
+                  className="text-xs text-white/80 bg-white/10 px-2 py-0.5 rounded"
+                >
+                  {m}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-purple-300/40 text-xs">拆分维度</span>
+            {RESULT_DIMS.map((d) => (
+              <span key={d} className="text-purple-200/50 text-xs">
+                {d}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Process metrics */}
+        <div className="mb-10">
+          <span className="text-[#E8A020] text-xs font-mono font-semibold mb-3 block">
+            过程指标 · 人货场
+          </span>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            {PROCESS_ITEMS.map((item) => (
+              <div
+                key={item.label}
+                className="bg-[#3D1A6A] rounded-xl p-4 border border-purple-800/50"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-[#E8A020] font-bold text-sm w-5 shrink-0">
+                    {item.dim}
+                  </span>
+                  <span className="text-white text-sm font-medium">
+                    {item.label}
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {item.metrics.map((m) => (
+                    <span
+                      key={m}
+                      className="text-xs text-white/70 bg-white/10 px-1.5 py-0.5 rounded"
+                    >
+                      {m}
+                    </span>
+                  ))}
+                </div>
+                {item.dims.length > 0 && (
+                  <div className="pt-2 border-t border-purple-800/40 flex flex-wrap gap-1.5">
+                    {item.dims.map((d) => (
+                      <span key={d} className="text-purple-300/40 text-xs">
+                        {d}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Methodology */}
@@ -86,12 +181,8 @@ export default function BIValue() {
                   {m.step}
                 </span>
                 <div>
-                  <p className="text-white text-sm font-medium mb-1">
-                    {m.title}
-                  </p>
-                  <p className="text-purple-300/50 text-xs leading-relaxed">
-                    {m.desc}
-                  </p>
+                  <p className="text-white text-sm font-medium mb-1">{m.title}</p>
+                  <p className="text-purple-300/50 text-xs leading-relaxed">{m.desc}</p>
                 </div>
               </div>
             ))}
