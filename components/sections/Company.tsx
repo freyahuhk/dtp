@@ -49,21 +49,21 @@ export default function Company() {
         </p>
 
         {/* Causal chain */}
-        <div className="max-w-xl mb-10">
+        <div className="max-w-lg mx-auto mb-10">
           {steps.map((step, i) => (
             <div key={i}>
               <div
-                className={`rounded-xl px-5 py-4 text-sm text-slate-700 leading-relaxed ${
+                className={`rounded-2xl px-6 py-5 text-sm leading-relaxed text-center ${
                   step.variant === "highlight"
                     ? "bg-[#F5EDF9] border border-[#652D90]/25 font-medium text-[#652D90]"
-                    : "bg-white border border-slate-200"
+                    : "bg-white border border-slate-200 text-slate-700"
                 }`}
               >
                 {step.text}
               </div>
               {i < steps.length - 1 && (
-                <div className="flex justify-center py-1.5">
-                  <div className="w-px h-5 bg-[#652D90]/30" />
+                <div className="flex justify-center py-2">
+                  <div className="w-px h-6 bg-[#652D90]/30" />
                 </div>
               )}
             </div>
