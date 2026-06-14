@@ -44,61 +44,63 @@ export default function AdvChallenge() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 border border-slate-200 rounded-lg overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-5 py-4 bg-[#F5EDF9] border border-purple-100 rounded-xl text-sm font-medium text-[#652D90] hover:bg-[#EDE0F5] transition-colors cursor-pointer"
+        className="w-full text-left px-4 py-3 flex items-center justify-between hover:bg-slate-50 transition-colors cursor-pointer"
       >
-        <span>DTP 的优势与挑战</span>
+        <span className="text-sm text-slate-600 font-medium">
+          DTP 的优势与挑战
+        </span>
         <span
-          className={`text-base transition-transform duration-200 ${
-            open ? "rotate-180" : ""
+          className={`text-slate-400 text-xl leading-none transition-transform duration-200 ${
+            open ? "rotate-45" : ""
           }`}
         >
-          ↓
+          +
         </span>
       </button>
 
       {open && (
-        <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {/* Advantages */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5">
-            <h4 className="font-semibold text-slate-800 text-sm mb-4 flex items-center gap-2">
-              <span className="text-emerald-500 text-base">✓</span>
-              优势
-            </h4>
-            <ul className="space-y-3">
-              {ADVANTAGES.map((item) => (
-                <li key={item.title}>
-                  <p className="font-medium text-slate-700 text-sm">
-                    {item.title}
-                  </p>
-                  <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="px-4 py-4 bg-blue-50/50 border-t border-slate-100">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {/* Advantages */}
+            <div>
+              <p className="text-xs font-semibold text-emerald-600 mb-3 uppercase tracking-wider">
+                ✓ 优势
+              </p>
+              <ul className="space-y-3">
+                {ADVANTAGES.map((item) => (
+                  <li key={item.title}>
+                    <p className="font-medium text-slate-700 text-sm">
+                      {item.title}
+                    </p>
+                    <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Challenges */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5">
-            <h4 className="font-semibold text-slate-800 text-sm mb-4 flex items-center gap-2">
-              <span className="text-amber-500 text-base">!</span>
-              挑战
-            </h4>
-            <ul className="space-y-3">
-              {CHALLENGES.map((item) => (
-                <li key={item.title}>
-                  <p className="font-medium text-slate-700 text-sm">
-                    {item.title}
-                  </p>
-                  <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </li>
-              ))}
-            </ul>
+            {/* Challenges */}
+            <div>
+              <p className="text-xs font-semibold text-amber-600 mb-3 uppercase tracking-wider">
+                ! 挑战
+              </p>
+              <ul className="space-y-3">
+                {CHALLENGES.map((item) => (
+                  <li key={item.title}>
+                    <p className="font-medium text-slate-700 text-sm">
+                      {item.title}
+                    </p>
+                    <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       )}

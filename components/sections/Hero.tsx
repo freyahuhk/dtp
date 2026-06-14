@@ -14,16 +14,10 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-3xl">
-        <p className="text-[#E8A020] text-xs font-semibold tracking-widest uppercase mb-8">
-          DTP 行业认知 · 数据分析视角
-        </p>
-
         <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          以数据视角
+          DTP 行业认知
           <br />
-          梳理 DTP 行业
-          <br />
-          <span className="text-[#E8A020]">盈利结构与逻辑</span>
+          <span className="text-[#E8A020]">数据分析师视角</span>
         </h1>
 
         <p className="text-purple-200/70 text-lg max-w-md leading-relaxed mb-14">
