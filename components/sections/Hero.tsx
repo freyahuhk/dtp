@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="w-px h-10 bg-purple-700" />
           <div>
             <div className="text-3xl font-bold text-white">3</div>
-            <div className="text-purple-300/50 text-xs mt-1">个关键利益方</div>
+            <div className="text-purple-300/50 text-xs mt-1">关键利益方 · 医生 / 患者 / 医保</div>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
-const ADVANTAGES = [
+type Item = { title: string; desc: string; data?: string };
+
+const ADVANTAGES: Item[] = [
   {
     title: "提高患者用药可及性",
     desc: "消除地理和时间限制，患者在院外也能获取所需药品",
@@ -6,6 +8,7 @@ const ADVANTAGES = [
   {
     title: "改善治疗依从性",
     desc: "个性化配送和患者支持计划帮助患者更好地遵从医嘱",
+    data: "可衡量：疗程完成率、断药召回率",
   },
   {
     title: "降低医疗成本",
@@ -17,10 +20,11 @@ const ADVANTAGES = [
   },
 ];
 
-const CHALLENGES = [
+const CHALLENGES: Item[] = [
   {
     title: "数据隐私与安全",
     desc: "收集大量患者数据，必须确保隐私合规和数据安全",
+    data: "对 BI 意味着：数据合规约束下的分析方法",
   },
   {
     title: "监管合规性",
@@ -77,6 +81,11 @@ export default function AdvSection() {
                     <p className="text-slate-500 text-xs leading-relaxed">
                       {item.desc}
                     </p>
+                    {item.data && (
+                      <p className="mt-2 text-xs font-medium text-emerald-700 bg-emerald-100/60 rounded px-2 py-1 inline-block">
+                        {item.data}
+                      </p>
+                    )}
                   </div>
                 </li>
               ))}
@@ -101,6 +110,11 @@ export default function AdvSection() {
                     <p className="text-slate-500 text-xs leading-relaxed">
                       {item.desc}
                     </p>
+                    {item.data && (
+                      <p className="mt-2 text-xs font-medium text-amber-700 bg-amber-100/60 rounded px-2 py-1 inline-block">
+                        {item.data}
+                      </p>
+                    )}
                   </div>
                 </li>
               ))}

@@ -9,15 +9,15 @@ export default function Company() {
       variant: "default" as const,
     },
     {
-      text: <>部分品种集采落标 <span className="text-[#652D90] mx-1 font-medium">→</span> 院内份额缩水</>,
+      text: <>部分品种集采落标 <span className="text-[#652D90] mx-1 font-medium">→</span> 院内份额受冲击，但成熟品牌仍有稳固的患者基础和品牌心智</>,
       variant: "default" as const,
     },
     {
       text: (
         <>
-          必须发展院外渠道{" "}
+          主动经营院外存量的<strong>第二增长曲线</strong>{" "}
           <span className="text-[#652D90] mx-1 font-medium">→</span>
-          DTP 药房 + 电商
+          DTP 药房 + 电商承接长期续方
           <span className="text-slate-400 text-xs ml-2">（京东健康 / 阿里健康 / 美团买药）</span>
         </>
       ),
@@ -43,9 +43,9 @@ export default function Company() {
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
         <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-10 leading-relaxed">
-          在集采压力下，DTP 成为晖致维系院外份额、
-          <strong className="text-slate-800">直达慢病患者</strong>
-          的关键渠道。
+          DTP 不只是集采压力下的"退路"，更是晖致
+          <strong className="text-slate-800">主动经营院外存量、直达慢病患者的第二增长曲线</strong>
+          。
         </p>
 
         {/* Causal chain */}
@@ -79,8 +79,8 @@ export default function Company() {
                 基于公开资料的推测
               </p>
               <p className="text-sm text-amber-700 leading-relaxed">
-                晖致产品以仿制的长期慢病用药为主，所以推测晖致 DTP
-                这条线的核心挑战，可能不是高值特药的<em>可负担</em>
+                晖致产品以<strong>过专利期原研药</strong>为主（如立普妥、络活喜），所以推测晖致
+                DTP 这条线的核心挑战，可能不是高值特药的<em>可负担</em>
                 问题，而是
                 <strong>慢病患者的院外长期续方和依从性管理</strong>。
               </p>
