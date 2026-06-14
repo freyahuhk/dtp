@@ -34,15 +34,25 @@ export default function Navigation() {
     return () => observer.disconnect();
   }, []);
 
+  const activeIndex = NAV_ITEMS.findIndex((item) => item.id === active);
+  const curveOffset = (i: number) => {
+    const dist = Math.abs(i - activeIndex);
+    return Math.round(Math.exp((-dist * dist) / 1.5) * 14);
+  };
+
   return (
     <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-5">
-      {NAV_ITEMS.map(({ id, label }) => (
+      {NAV_ITEMS.map(({ id, label }, i) => (
         <button
           key={id}
           onClick={() =>
             document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
           }
           className="flex items-center gap-3 group cursor-pointer"
+          style={{
+            transform: `translateX(-${curveOffset(i)}px)`,
+            transition: "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
+          }}
         >
           <span
             className={`text-xs font-medium transition-all duration-200 whitespace-nowrap ${
