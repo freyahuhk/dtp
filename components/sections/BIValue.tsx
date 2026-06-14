@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const GOALS = ["患者可及性", "依从性", "渠道效率"];
 
 const RESULT_METRICS = ["GMV", "收入", "利润率"];
@@ -61,6 +65,8 @@ const METHODOLOGY = [
 ];
 
 export default function BIValue() {
+  const [methodOpen, setMethodOpen] = useState(false);
+
   return (
     <section
       id="bi-value"
@@ -170,23 +176,39 @@ export default function BIValue() {
         </div>
 
         {/* Methodology */}
-        <div className="bg-white/8 rounded-xl p-6 border border-white/10">
-          <p className="text-xs font-semibold text-purple-400/50 mb-5 tracking-wider uppercase">
-            面对"数据缺失"怎么办
-          </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {METHODOLOGY.map((m) => (
-              <div key={m.step} className="flex items-start gap-3">
-                <span className="text-[#E8A020] font-mono text-sm shrink-0 mt-0.5">
-                  {m.step}
-                </span>
-                <div>
-                  <p className="text-white text-sm font-medium mb-1">{m.title}</p>
-                  <p className="text-purple-300/50 text-xs leading-relaxed">{m.desc}</p>
-                </div>
+        <div className="rounded-xl border border-white/10 overflow-hidden">
+          <button
+            onClick={() => setMethodOpen(!methodOpen)}
+            className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer"
+          >
+            <span className="text-xs font-semibold text-purple-400/50 tracking-wider uppercase">
+              面对"数据缺失"怎么办
+            </span>
+            <span
+              className={`text-purple-400/50 text-xl leading-none transition-transform duration-200 ${
+                methodOpen ? "rotate-45" : ""
+              }`}
+            >
+              +
+            </span>
+          </button>
+          {methodOpen && (
+            <div className="px-6 pb-6 bg-white/5 border-t border-white/10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-5">
+                {METHODOLOGY.map((m) => (
+                  <div key={m.step} className="flex items-start gap-3">
+                    <span className="text-[#E8A020] font-mono text-sm shrink-0 mt-0.5">
+                      {m.step}
+                    </span>
+                    <div>
+                      <p className="text-white text-sm font-medium mb-1">{m.title}</p>
+                      <p className="text-purple-300/50 text-xs leading-relaxed">{m.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Footer */}
