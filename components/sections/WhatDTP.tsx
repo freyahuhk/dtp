@@ -11,6 +11,40 @@ const QA_ITEMS = [
   },
 ];
 
+const TABLE_ROWS = [
+  {
+    dim: "谁决定买什么",
+    rx: "医生",
+    otc: "患者自己",
+  },
+  {
+    dim: "怎么卖",
+    rx: "医药代表 → 医生 → 处方",
+    otc: "品牌广告 → 消费者 → 下单",
+  },
+  {
+    dim: "在哪卖",
+    rx: "医院 + DTP 药房",
+    otc: "零售药店 + 电商",
+  },
+  {
+    dim: "谁付钱",
+    rx: "医保 + 自费",
+    otc: "主要自费",
+  },
+  {
+    dim: "受什么影响最大",
+    rx: "政策（集采 / 医保）",
+    otc: "市场竞争（品牌 / 价格）",
+  },
+  {
+    dim: "分析重点",
+    rx: "处方量、医生覆盖、患者依从性",
+    otc: "GMV、转化率、复购率",
+    highlight: true,
+  },
+];
+
 export default function WhatDTP() {
   return (
     <section
@@ -29,77 +63,64 @@ export default function WhatDTP() {
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-12 leading-relaxed">
+        <p className="text-lg text-slate-600 border-l-4 border-[#E8A020] pl-5 mb-10 leading-relaxed">
           DTP 本质不是"卖药"，是
-          <strong className="text-slate-800">承接多方 + 管理患者长期用药</strong>
-          。
+          <strong className="text-slate-800">处方药的院外延伸</strong>
+          ——它的运转逻辑跟电商完全不同。
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12">
-          {/* What */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
-              💊
-            </div>
-            <h3 className="font-semibold text-slate-900 mb-2">卖什么</h3>
-            <p className="text-slate-700 text-sm font-medium mb-2">
-              专方药 / 高值药 / 长期慢病用药
-            </p>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              不是 OTC，需医生处方；单价高、用药周期长、患者无法自行判断用量
-            </p>
-          </div>
-
-          {/* Who */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
-              🔗
-            </div>
-            <h3 className="font-semibold text-slate-900 mb-3">谁在其中</h3>
-            <div className="space-y-2.5">
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#652D90] shrink-0" />
-                <span className="text-slate-600">
-                  <strong>开方的</strong>：医生
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E8A020] shrink-0" />
-                <span className="text-slate-600">
-                  <strong>用药的</strong>：患者
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
-                <span className="text-slate-600">
-                  <strong>付费的</strong>：医保 / 自费
-                </span>
-              </div>
-            </div>
-            <p className="text-slate-400 text-xs mt-3">
-              三人不离，与纯电商最大的本质区别
-            </p>
-          </div>
-
-          {/* Moat */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
-            <div className="w-10 h-10 bg-[#F5EDF9] rounded-lg flex items-center justify-center mb-4 text-xl">
-              🏗️
-            </div>
-            <h3 className="font-semibold text-slate-900 mb-2">壁垒在哪</h3>
-            <p className="text-slate-700 text-sm mb-3">
-              不是药本身，是
-              <strong>专业药事服务 + 患者全生命周期管理</strong>
-            </p>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              普通药房没有这套能力——管续方、管依从性、管随访，这才是 DTP 真正难以复制的地方
-            </p>
-          </div>
+        {/* Comparison table */}
+        <div className="bg-white rounded-xl border border-slate-200 overflow-hidden mb-8">
+          <table className="w-full text-sm">
+            <thead>
+              <tr>
+                <th className="text-left px-5 py-4 text-slate-400 font-medium bg-slate-50 w-36 border-b border-slate-100" />
+                <th className="px-5 py-4 border-b border-[#652D90]/20 bg-[#F5EDF9] text-center w-1/2">
+                  <div className="text-[#652D90] font-bold text-sm">处方药（Rx）</div>
+                  <div className="text-[#652D90]/60 text-xs font-normal mt-0.5">← DTP 在此</div>
+                </th>
+                <th className="px-5 py-4 border-b border-slate-100 bg-slate-50 text-center w-1/2">
+                  <div className="text-slate-400 font-medium text-sm">非处方药（OTC）</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {TABLE_ROWS.map((row, i) => (
+                <tr
+                  key={row.dim}
+                  className={i < TABLE_ROWS.length - 1 ? "border-b border-slate-100" : ""}
+                >
+                  <td className="px-5 py-4 text-slate-400 text-xs font-medium whitespace-nowrap">
+                    {row.dim}
+                  </td>
+                  <td
+                    className={`px-5 py-4 text-center ${
+                      row.highlight
+                        ? "bg-[#F5EDF9] text-[#652D90] font-semibold"
+                        : "bg-[#faf8fd] text-slate-700"
+                    }`}
+                  >
+                    {row.rx}
+                  </td>
+                  <td className="px-5 py-4 text-center text-slate-400">
+                    {row.otc}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
-        <div>
-          <QAAccordion items={QA_ITEMS} />
+        {/* DTP callout */}
+        <div className="bg-[#F5EDF9] border border-purple-100 rounded-xl p-5 mb-10 flex items-start gap-3">
+          <span className="text-[#652D90] text-lg shrink-0 mt-0.5">💡</span>
+          <p className="text-sm text-slate-700 leading-relaxed">
+            <strong className="text-[#652D90]">DTP 的壁垒不在药本身</strong>，而在于同时打通三方——
+            开方的（医生）、用药的（患者）、付费的（医保）。三人不离，才能形成普通零售无法复制的服务闭环。
+          </p>
         </div>
+
+        <QAAccordion items={QA_ITEMS} />
       </div>
     </section>
   );
