@@ -23,8 +23,8 @@ const TABLE_ROWS = [
   },
   {
     dim: "在哪卖",
-    rx: "医院 + DTP 药房 + 电商 + O2O",
-    otc: "零售药店 + 电商 + O2O",
+    rx: "医院 + DTP 药房 + 电商",
+    otc: "零售药店 + 电商",
   },
   {
     dim: "谁付钱",
