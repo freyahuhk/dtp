@@ -35,87 +35,63 @@ export default function WhyDTP() {
 
         {/* Flow diagram */}
         <div className="mb-10">
-          <svg viewBox="0 0 760 470" className="w-full max-w-3xl mx-auto" style={{ fontFamily: "inherit" }}>
+          <svg viewBox="0 0 700 450" className="w-full max-w-3xl mx-auto" style={{ fontFamily: "inherit" }}>
             <defs>
               <marker id="ap" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
-                <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#652D90" fillOpacity="0.6" />
+                <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#94a3b8" />
               </marker>
             </defs>
 
-            {/* Top → fork */}
-            <line x1="380" y1="60" x2="380" y2="80" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="155" y1="80" x2="605" y2="80" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="155" y1="80" x2="155" y2="95" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
-            <line x1="605" y1="80" x2="605" y2="95" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+            {/* Title */}
+            <text x="350" y="18" textAnchor="middle" fontSize="14" fontWeight="700" fill="#1e293b">DTP 渠道崛起的两股推力</text>
 
-            {/* Left header → sub fork */}
-            <line x1="155" y1="131" x2="155" y2="140" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="85" y1="140" x2="220" y2="140" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="85" y1="140" x2="85" y2="148" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
-            <line x1="220" y1="140" x2="220" y2="148" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+            {/* Top: 政策源头 */}
+            <rect x="200" y="28" width="300" height="72" rx="10" fill="#f5f3f0" stroke="#c8c4bc" strokeWidth="1.5" />
+            <text x="350" y="60" textAnchor="middle" fontSize="14" fontWeight="700" fill="#4a4540">政策源头</text>
+            <text x="350" y="80" textAnchor="middle" fontSize="11" fill="#94a3b8">一致性评价 + 集采</text>
 
-            {/* Left sub → merge join */}
-            <line x1="85" y1="218" x2="85" y2="238" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="220" y1="218" x2="220" y2="238" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="85" y1="238" x2="220" y2="238" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <circle cx="155" cy="238" r="3" fill="#652D90" fillOpacity="0.4" />
-            <line x1="155" y1="238" x2="155" y2="282" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+            {/* Fork */}
+            <line x1="350" y1="100" x2="350" y2="115" stroke="#94a3b8" strokeWidth="1.5" />
+            <line x1="170" y1="115" x2="530" y2="115" stroke="#94a3b8" strokeWidth="1.5" />
+            <line x1="170" y1="115" x2="170" y2="145" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
+            <line x1="530" y1="115" x2="530" y2="145" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
+            <text x="170" y="131" textAnchor="middle" fontSize="10" fill="#94a3b8">供给侧推力</text>
+            <text x="530" y="131" textAnchor="middle" fontSize="10" fill="#94a3b8">支付侧条件</text>
 
-            {/* Right header → sub → merge */}
-            <line x1="605" y1="131" x2="605" y2="148" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
-            <line x1="605" y1="218" x2="605" y2="282" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+            {/* Left box 1 */}
+            <rect x="30" y="145" width="280" height="82" rx="10" fill="#fde8e8" stroke="#d48080" strokeWidth="1.5" />
+            <text x="170" y="179" textAnchor="middle" fontSize="13" fontWeight="700" fill="#8b2020">高价原研药被挤出院内</text>
+            <text x="170" y="200" textAnchor="middle" fontSize="10" fill="#b05050">集采替代 + 药占比考核</text>
 
-            {/* Horizontal connector between merge boxes */}
-            <line x1="285" y1="304" x2="470" y2="304" stroke="#94a3b8" strokeWidth="1.5" strokeOpacity="0.5" />
+            {/* Left arrow down */}
+            <line x1="170" y1="227" x2="170" y2="262" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
 
-            {/* Converge → DTP */}
-            <line x1="155" y1="326" x2="155" y2="368" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="605" y1="326" x2="605" y2="368" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <line x1="155" y1="368" x2="605" y2="368" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" />
-            <circle cx="380" cy="368" r="3" fill="#652D90" fillOpacity="0.4" />
-            <line x1="380" y1="368" x2="380" y2="405" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+            {/* Left box 2 */}
+            <rect x="30" y="262" width="280" height="60" rx="10" fill="#fde8e8" stroke="#d48080" strokeWidth="1.5" />
+            <text x="170" y="297" textAnchor="middle" fontSize="13" fontWeight="700" fill="#8b2020">处方流向院外</text>
 
-            {/* ── BOXES ── */}
-            {/* Top: 一致性评价 → 集采 */}
-            <rect x="210" y="10" width="340" height="50" rx="8" fill="#F5EDF9" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.45" />
-            <text x="380" y="41" textAnchor="middle" fontSize="13" fontWeight="600" fill="#652D90">一致性评价  →  集采</text>
+            {/* Right box 1 */}
+            <rect x="390" y="145" width="280" height="82" rx="10" fill="#e5f0f8" stroke="#80a8c8" strokeWidth="1.5" />
+            <text x="530" y="179" textAnchor="middle" fontSize="13" fontWeight="700" fill="#1a3a6b">双通道政策</text>
+            <text x="530" y="200" textAnchor="middle" fontSize="10" fill="#4070a0">医保谈判药院外可报销</text>
 
-            {/* Left group header */}
-            <rect x="25" y="95" width="260" height="36" rx="6" fill="white" stroke="#e2e8f0" strokeWidth="1.5" />
-            <text x="155" y="118" textAnchor="middle" fontSize="12" fontWeight="600" fill="#1e293b">【供给侧推力】</text>
+            {/* Right arrow down */}
+            <line x1="530" y1="227" x2="530" y2="262" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
 
-            {/* Sub-left: 药占比考核 */}
-            <rect x="25" y="148" width="120" height="70" rx="8" fill="white" stroke="#e2e8f0" strokeWidth="1.5" />
-            <text x="85" y="176" textAnchor="middle" fontSize="11" fontWeight="500" fill="#475569">药占比考核</text>
-            <text x="85" y="194" textAnchor="middle" fontSize="10" fill="#94a3b8">（医院要外推药）</text>
+            {/* Right box 2 */}
+            <rect x="390" y="262" width="280" height="60" rx="10" fill="#e5f0f8" stroke="#80a8c8" strokeWidth="1.5" />
+            <text x="530" y="297" textAnchor="middle" fontSize="13" fontWeight="700" fill="#1a3a6b">患者院外接得住</text>
 
-            {/* Sub-right: 原研药院内被替代 */}
-            <rect x="155" y="148" width="130" height="70" rx="8" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1.5" />
-            <text x="220" y="174" textAnchor="middle" fontSize="11" fontWeight="500" fill="#475569">原研药院内被替代</text>
-            <text x="220" y="191" textAnchor="middle" fontSize="10" fill="#94a3b8">（高价药院内</text>
-            <text x="220" y="207" textAnchor="middle" fontSize="10" fill="#94a3b8">待不住）</text>
-
-            {/* Left merge: 医院主动外推高价药 */}
-            <rect x="25" y="282" width="260" height="44" rx="8" fill="#F5EDF9" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.45" />
-            <text x="155" y="309" textAnchor="middle" fontSize="12" fontWeight="600" fill="#652D90">医院主动外推高价药</text>
-
-            {/* Right group header */}
-            <rect x="470" y="95" width="270" height="36" rx="6" fill="white" stroke="#e2e8f0" strokeWidth="1.5" />
-            <text x="605" y="118" textAnchor="middle" fontSize="12" fontWeight="600" fill="#1e293b">【支付侧条件】</text>
-
-            {/* Right sub: 双通道政策 */}
-            <rect x="470" y="148" width="270" height="70" rx="8" fill="#F5EDF9" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.45" />
-            <text x="605" y="176" textAnchor="middle" fontSize="12" fontWeight="600" fill="#652D90">双通道政策</text>
-            <text x="605" y="197" textAnchor="middle" fontSize="10" fill="#652D90" fillOpacity="0.7">（院外能报销了）</text>
-
-            {/* Right merge: 院外也能医保报销 */}
-            <rect x="470" y="282" width="270" height="44" rx="8" fill="#F5EDF9" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.45" />
-            <text x="605" y="309" textAnchor="middle" fontSize="12" fontWeight="600" fill="#652D90">院外也能医保报销</text>
+            {/* Convergence arrows → ← */}
+            <line x1="310" y1="292" x2="350" y2="292" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
+            <line x1="390" y1="292" x2="350" y2="292" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
+            <circle cx="350" cy="292" r="3" fill="#94a3b8" fillOpacity="0.8" />
+            <line x1="350" y1="292" x2="350" y2="362" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
 
             {/* DTP 渠道崛起 */}
-            <rect x="215" y="405" width="330" height="56" rx="8" fill="#652D90" />
-            <text x="380" y="430" textAnchor="middle" fontSize="13" fontWeight="700" fill="white">【DTP 渠道崛起】</text>
-            <text x="380" y="450" textAnchor="middle" fontSize="11" fill="#e9d5ff">院外承接处方 + 患者刷医保取药</text>
+            <rect x="200" y="362" width="300" height="70" rx="10" fill="#652D90" />
+            <text x="350" y="393" textAnchor="middle" fontSize="14" fontWeight="700" fill="white">DTP 渠道崛起</text>
+            <text x="350" y="414" textAnchor="middle" fontSize="11" fill="#e9d5ff">院外承接处方，患者刷医保取药</text>
           </svg>
         </div>
 
