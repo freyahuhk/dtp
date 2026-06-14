@@ -89,7 +89,7 @@ export default function BIValue() {
   return (
     <section
       id="bi-value"
-      className="min-h-screen bg-[#2D1255] flex flex-col justify-center px-12 lg:px-24 py-24"
+      className="min-h-screen bg-[#2D1255] flex flex-col justify-center px-12 lg:px-24 py-24 relative"
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
@@ -237,6 +237,10 @@ export default function BIValue() {
             </div>
           )}
         </div>
+
+        <span className="absolute bottom-6 right-10 lg:right-24 text-xs font-medium tracking-widest text-white/15 pointer-events-none select-none">
+          Freya Hu
+        </span>
 
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-purple-800/30 flex items-center justify-between">

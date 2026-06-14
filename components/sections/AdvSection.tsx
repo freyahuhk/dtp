@@ -40,7 +40,7 @@ export default function AdvSection() {
   return (
     <section
       id="adv-challenge"
-      className="min-h-screen bg-white flex flex-col justify-center px-12 lg:px-24 py-24"
+      className="min-h-screen bg-white flex flex-col justify-center px-12 lg:px-24 py-24 relative"
     >
       <div className="max-w-4xl">
         <div className="flex items-center gap-3 mb-6">
@@ -108,6 +108,9 @@ export default function AdvSection() {
           </div>
         </div>
       </div>
+      <span className="absolute bottom-6 right-10 lg:right-24 text-xs font-medium tracking-widest text-black/10 pointer-events-none select-none">
+        Freya Hu
+      </span>
     </section>
   );
 }

@@ -45,6 +45,10 @@ export default function Hero() {
         </div>
       </div>
 
+      <span className="absolute bottom-6 right-10 lg:right-24 text-xs font-medium tracking-widest text-white/15 pointer-events-none select-none">
+        Freya Hu
+      </span>
+
       {/* Scroll hint */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-purple-400/50 text-xs">
         <span>向下探索</span>
