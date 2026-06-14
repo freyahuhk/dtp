@@ -82,8 +82,8 @@ export default function WhyDTP() {
             {/* 药占比 → 双通道 */}
             <line x1="130" y1="298" x2="130" y2="328" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
 
-            {/* 原研药 → 医院外推 */}
-            <line x1="470" y1="278" x2="470" y2="308" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ag)" />
+            {/* 原研药 → 收敛到 DTP（绕右侧） */}
+            <polyline points="580,253 592,253 592,493 470,493" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeOpacity="0.5" />
 
             {/* 双通道 → 院外报销 */}
             <line x1="130" y1="398" x2="130" y2="428" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
