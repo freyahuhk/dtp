@@ -93,28 +93,29 @@ export default function BIValue() {
         </h2>
         <div className="w-12 h-0.5 bg-[#E8A020] mb-8" />
 
-        <p className="text-lg text-purple-200/70 border-l-4 border-[#E8A020] pl-5 mb-8 leading-relaxed">
-          DTP 作为晖致的新业务，数据分析的价值是驱动它
-          <strong className="text-white">从 0 到 1 跑通</strong>
-          ——核心是建立完整的指标体系，让每一层业务都有数可依。
-        </p>
-
         {/* Thinking flow */}
-        <div className="flex items-center gap-2 mb-10 flex-wrap">
-          {[
-            "建设数据标准",
-            "搭建数据指标体系",
-            "支持品牌在不同渠道的策略决策",
-          ].map((step, i, arr) => (
-            <div key={step} className="flex items-center gap-2">
-              <span className="text-xs text-purple-200/60 bg-white/5 border border-purple-700/40 px-3 py-1.5 rounded-full">
-                {step}
-              </span>
-              {i < arr.length - 1 && (
-                <span className="text-[#E8A020]/50 text-xs">→</span>
-              )}
-            </div>
-          ))}
+        <div className="border-l-4 border-[#E8A020] pl-5 mb-10">
+          <p className="text-lg text-purple-200/70 leading-relaxed mb-4">
+            DTP 作为晖致的新业务，数据分析的价值是驱动它
+            <strong className="text-white">从 0 到 1 跑通</strong>
+            ——核心是建立完整的指标体系，让每一层业务都有数可依。
+          </p>
+          <div className="flex items-center gap-2 flex-wrap">
+            {[
+              "建设数据标准",
+              "搭建数据指标体系",
+              "支持品牌在不同渠道的策略决策",
+            ].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-2">
+                <span className="text-xs text-purple-200/60 bg-white/5 border border-purple-700/40 px-3 py-1.5 rounded-full">
+                  {step}
+                </span>
+                {i < arr.length - 1 && (
+                  <span className="text-[#E8A020]/50 text-xs">→</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Analysis goals */}
