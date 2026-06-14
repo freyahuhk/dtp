@@ -110,19 +110,6 @@ export default function Framework() {
           })}
         </div>
 
-        {/* Key insight */}
-        <div className="bg-[#F5EDF9] border border-purple-200 rounded-xl p-6">
-          <p className="text-xs font-semibold text-[#652D90] mb-3 tracking-wider uppercase">
-            关键洞察
-          </p>
-          <p className="text-slate-700 leading-relaxed">
-            普通零售的可及性是"
-            <strong className="text-slate-900">药—钱—店</strong>
-            "的问题；DTP 的可及性是"
-            <strong className="text-[#652D90]">处方—医保资质—患者管理</strong>
-            "的问题。
-          </p>
-        </div>
       </div>
     </section>
   );
