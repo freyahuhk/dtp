@@ -76,6 +76,9 @@ export default function WhyDTP() {
             {/* Fork junction dot */}
             <circle cx="300" cy="210" r="3" fill="#652D90" fillOpacity="0.4" />
 
+            {/* 药占比 → 医院主动外推 (横向连线) */}
+            <polyline points="240,263 300,263 300,333 360,333" fill="none" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
+
             {/* 药占比 → 双通道 */}
             <line x1="130" y1="298" x2="130" y2="328" stroke="#652D90" strokeWidth="1.5" strokeOpacity="0.5" markerEnd="url(#ap)" />
 
