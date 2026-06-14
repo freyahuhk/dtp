@@ -53,9 +53,11 @@ export default function WhyDTP() {
             <line x1="175" y1="100" x2="175" y2="130" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
             <line x1="525" y1="100" x2="525" y2="130" stroke="#94a3b8" strokeWidth="1.5" markerEnd="url(#ap)" />
 
-            {/* Labels — placed beside fork, not on arrows */}
-            <text x="88" y="96" textAnchor="middle" fontSize="10" fill="#94a3b8">供给侧推力</text>
-            <text x="612" y="96" textAnchor="middle" fontSize="10" fill="#94a3b8">支付侧条件</text>
+            {/* Labels — embedded on the fork line */}
+            <rect x="232" y="91" width="60" height="18" rx="4" fill="white" />
+            <text x="262" y="104" textAnchor="middle" fontSize="10" fill="#94a3b8">供给侧推力</text>
+            <rect x="408" y="91" width="60" height="18" rx="4" fill="white" />
+            <text x="438" y="104" textAnchor="middle" fontSize="10" fill="#94a3b8">支付侧条件</text>
 
             {/* Left box 1 */}
             <rect x="65" y="130" width="220" height="80" rx="10" fill="#fde8e8" stroke="#d48080" strokeWidth="1.5" />
