@@ -19,7 +19,14 @@ export default function Hero() {
             胡必青 <span className="text-[#E8A020]">Freya Hu</span>
           </span>
           <span className="text-purple-300/40">·</span>
-          <span className="text-sm text-purple-200/60">数据分析师</span>
+          <a
+            href="https://www.freyahuhk.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-purple-200/60 hover:text-[#E8A020] underline underline-offset-4 transition-colors"
+          >
+            个人网站
+          </a>
         </div>
 
         <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
