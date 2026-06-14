@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const COMPARISON_ROWS = [
-  { label: "卖什么",     normal: "OTC + 常见慢病药",    dtp: "高值专科药（肿瘤、罕见病、自免等）" },
-  { label: "需要处方吗", normal: "OTC 不需要",           dtp: "必须凭处方" },
-  { label: "能报医保吗", normal: "部分可刷个人账户",     dtp: "双通道品种可走统筹报销" },
-  { label: "服务",       normal: "基础售药",             dtp: "冷链存储、用药指导、患者管理" },
-  { label: "客单价",     normal: "几十 ~ 几百元",        dtp: "几千 ~ 几万元" },
+  { label: "卖什么",     dtp: "高值专科药（肿瘤、罕见病、自免等）", normal: "OTC + 常见慢病药" },
+  { label: "需要处方吗", dtp: "必须凭处方",                          normal: "OTC 不需要" },
+  { label: "能报医保吗", dtp: "双通道品种可走统筹报销",              normal: "部分可刷个人账户" },
+  { label: "服务",       dtp: "冷链存储、用药指导、患者管理",        normal: "基础售药" },
+  { label: "客单价",     dtp: "几千 ~ 几万元",                       normal: "几十 ~ 几百元" },
 ];
 
 const TABLE_ROWS = [
@@ -135,11 +135,11 @@ export default function WhatDTP() {
                 <thead>
                   <tr className="bg-slate-50">
                     <th className="text-left px-4 py-3 text-slate-400 font-medium w-28 border-b border-slate-100" />
-                    <th className="px-4 py-3 text-center text-slate-400 font-medium border-b border-slate-100">
-                      普通零售药店
-                    </th>
                     <th className="px-4 py-3 text-center text-[#652D90] font-bold border-b border-[#652D90]/20 bg-[#F5EDF9]">
                       DTP 专业药房
+                    </th>
+                    <th className="px-4 py-3 text-center text-slate-400 font-medium border-b border-slate-100">
+                      普通零售药店
                     </th>
                   </tr>
                 </thead>
@@ -152,11 +152,11 @@ export default function WhatDTP() {
                       <td className="px-4 py-3 text-slate-400 text-xs font-medium whitespace-nowrap">
                         {row.label}
                       </td>
-                      <td className="px-4 py-3 text-center text-slate-500 text-xs">
-                        {row.normal}
-                      </td>
                       <td className="px-4 py-3 text-center text-slate-700 text-xs bg-[#faf8fd]">
                         {row.dtp}
+                      </td>
+                      <td className="px-4 py-3 text-center text-slate-500 text-xs">
+                        {row.normal}
                       </td>
                     </tr>
                   ))}
