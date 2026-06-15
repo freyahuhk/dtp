@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geist = Geist({
@@ -26,6 +27,7 @@ export default function RootLayout({
             Freya Hu
           </span>
         </div>
+        <Analytics />
       </body>
     </html>
   );
